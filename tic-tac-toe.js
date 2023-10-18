@@ -83,4 +83,19 @@ window.addEventListener("load", (event) => {
       }
     });
   }
+
+  const btn = document.querySelector(".btn");
+  console.log(btn);
+  btn.addEventListener("click", function reset() {
+    document.getElementById("status").textContent =
+      "Move your mouse over a square and click to play an X or an O.";
+    document.getElementById("status").classList.remove("you-won");
+    sq.forEach((e) => {
+      e.classList.remove("X");
+      e.classList.remove("O");
+      e.textContent = "";
+    });
+  });
+
+
 });
