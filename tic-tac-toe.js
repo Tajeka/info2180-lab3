@@ -31,5 +31,14 @@ window.addEventListener("load", (event) => {
     });
   };
 
+  sq.forEach(function (elem) {
+    elem.addEventListener("mouseover", function (e) {
+      e.target.classList.add("hover");
+    });
+
+    elem.addEventListener("mouseout", function (e) {
+      e.target.classList.remove("hover");
+    });
+  });
 
 });
